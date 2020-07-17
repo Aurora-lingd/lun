@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Aurora-lingd/lun/issues"
   },
-  "homepage": "https://github.com/Aurora-lingd/lun#readme"
+  "homepage": "https://github.com/Aurora-lingd/lun#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
 }
