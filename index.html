@@ -7,31 +7,51 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>微光</title>
   <style>
-    *{margin: 0;padding: 0;box-sizing: border-box}
-    html{
-      --button-height:32px;
-      --font-size:14px;
-      --button-bg:white;
-      --button-active-bg:#eee;
-      --border-radius:4px;
-      --color:#333;
-      --border-color:#999;
-      --border-color-hover:#666;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
     }
-    #app{
+
+    html {
+      --button-height: 32px;
+      --font-size: 14px;
+      --button-bg: white;
+      --button-active-bg: #eee;
+      --border-radius: 4px;
+      --color: #333;
+      --border-color: #999;
+      --border-color-hover: #666;
+    }
+
+    #app {
       margin: 20px;
     }
-    body{
+
+    body {
       font-size: var(--font-size);
+    }
+  </style>
+  <style>
+    .icon {
+      width: 1em;
+      height: 1em;
     }
   </style>
 </head>
 <body>
 <div id="app">
-  <w-button></w-button>
+  <w-button>
+    爱你
+  </w-button>
+  <w-button icon="settings">
+    爱你
+  </w-button>
+  <w-button icon="settings" icon-position="right">
+    爱你
+  </w-button>
 </div>
-<script src="./src/app.js">
-
-</script>
+<script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_1949356_4u3krrh0p6t.js"></script>
 </body>
 </html>
