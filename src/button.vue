@@ -1,16 +1,15 @@
 <template>
   <button class="w-button" :class="{[`icon-${iconPosition}`]:true}">
-    <svg v-if="icon" class="icon">
-      <use :xlink:href=`#i-${icon}`></use>
-    </svg>
+    <w-icon v-if="icon" :name="icon" />
     <div class="content">
       <slot></slot>
     </div>
   </button>
 </template>
 <script>
+  import Icon from "./icon";
   export default {
-    //props:['icon','iconPosition']
+    components: {Icon},
     props:{
       icon:{},
       iconPosition:{
