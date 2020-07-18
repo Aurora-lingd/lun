@@ -1,15 +1,13 @@
 <template>
   <button class="w-button" :class="{[`icon-${iconPosition}`]:true}">
-    <w-icon v-if="icon" :name="icon" />
+    <w-icon v-if="icon" :name="icon" class="icon" ></w-icon>
     <div class="content">
       <slot></slot>
     </div>
   </button>
 </template>
 <script>
-  import Icon from "./icon";
   export default {
-    components: {Icon},
     props:{
       icon:{},
       iconPosition:{
