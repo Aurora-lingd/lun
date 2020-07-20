@@ -6,4 +6,7 @@ Vue.component('w-button',Button)
 Vue.component('w-icon',Icon)
 new Vue({
   el:'#app',
+  data:{
+    loading1:false
+  }
 })

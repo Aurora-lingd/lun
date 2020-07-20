@@ -35,13 +35,13 @@
 </head>
 <body>
 <div id="app">
-  <w-button>
+  <w-button :loading="loading1" @click="loading1 = !loading1">
     爱你
   </w-button>
-  <w-button icon="settings">
+  <w-button icon="settings" :loading="true">
     爱你
   </w-button>
-  <w-button icon="settings" icon-position="right">
+  <w-button icon="settings" icon-position="right" :loading="true">
     爱你
   </w-button>
 </div>
