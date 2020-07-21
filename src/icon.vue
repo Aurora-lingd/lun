@@ -6,10 +6,11 @@
 <script>
   import './svg'
   export default {
+    name:'WeiIcon',
     props:['name']
   }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   .w-icon {
     width: 1em;
     height: 1em;
