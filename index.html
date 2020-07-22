@@ -42,7 +42,8 @@
   <div>
     <w-input value="你好" disable></w-input>
     <w-input value="哈哈" readonly></w-input>
-    <w-input value="爱你" ></w-input>
+    <w-input value="爱你" v-model="message" ></w-input>
+    <p>{{message}}</p>
   </div>
   <div class="box">
     <w-input value="开心" @change="inputChange"></w-input>
