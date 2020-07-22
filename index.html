@@ -39,25 +39,46 @@
 </head>
 <body>
 <div id="app">
-  <w-row>
-    <w-col></w-col>
-    <w-col></w-col>
-  </w-row>
-  <w-row>
-    <w-col></w-col>
-    <w-col></w-col>
-    <w-col></w-col>
-  </w-row>
-  <w-row>
-    <w-col></w-col>
-    <w-col></w-col>
-    <w-col></w-col>
-    <w-col></w-col>
-  </w-row>
-  <w-row>
-    <w-col span="2"></w-col>
-    <w-col span="22"></w-col>
-  </w-row>
+  <div style="border: 1px solid gainsboro">
+    <w-row gutter="20">
+      <w-col>1</w-col>
+      <w-col></w-col>
+    </w-row>
+    <w-row gutter="20">
+      <w-col></w-col>
+      <w-col></w-col>
+      <w-col></w-col>
+    </w-row>
+    <w-row gutter="20">
+      <w-col></w-col>
+      <w-col></w-col>
+      <w-col></w-col>
+      <w-col></w-col>
+    </w-row>
+    <w-row gutter="20">
+      <w-col span="2"></w-col>
+      <w-col span="22"></w-col>
+    </w-row>
+    <w-row gutter="20">
+      <w-col span="2"></w-col>
+      <w-col span="20" offset="2"></w-col>
+    </w-row>
+    <w-row gutter="20">
+      <w-col span="4"></w-col>
+      <w-col span="20"></w-col>
+    </w-row>
+    <w-row gutter="20">
+      <w-col span="4"></w-col>
+      <w-col span="8" offset="2"></w-col>
+      <w-col span="8" offset="2"></w-col>
+    </w-row>
+    <w-row gutter="20">
+      <w-col span="4"></w-col>
+      <w-col span="4" offset="6"></w-col>
+      <w-col span="8" offset="2"></w-col>
+    </w-row>
+  </div>
+
   <div class="box">
     <w-input value="你好" disabled></w-input>
     <w-input value="哈哈" readonly></w-input>
