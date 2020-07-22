@@ -1,5 +1,3 @@
-import Button from "../src/button";
-
 const expect = chai.expect;
 import Vue from 'vue'
 import Input from '../src/input'
@@ -31,7 +29,7 @@ describe('Input', () => {
     it('接收 disabled',()=>{
       vm = new Constructor({
         propsData: {
-          disable: true
+          disabled: true
         }
       }).$mount()
       const inputElement = vm.$el.querySelector('input')
