@@ -31,19 +31,30 @@
   </style>
   <style>
     .demo{
-      border: 1px solid palegoldenrod;
       min-height: 100px;
+    }
+    .sider{
+      background: pink;
+      width: 200px;
+    }
+    .header{
+      background: palegoldenrod;
+      height: 100px;
+    }
+    .footer{
+      background: paleturquoise;
+      height: 50px;
     }
   </style>
 </head>
 <body>
 <div id="app">
   <w-layout style="height: 100vh">
-    <w-sider class="demo">sider</w-sider>
+    <w-sider >sider</w-sider>
     <w-layout>
-      <w-header class="demo">header</w-header>
-      <w-content class="demo">content</w-content>
-      <w-footer class="demo">footer</w-footer>
+      <w-header >header</w-header>
+      <w-content >content</w-content>
+      <w-footer >footer</w-footer>
     </w-layout>
   </w-layout>
 </div>

@@ -28,7 +28,6 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  background: pink;
   &.hasSider{
     flex-direction: row;
   }
