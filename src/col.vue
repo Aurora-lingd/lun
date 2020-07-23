@@ -36,16 +36,30 @@
         gutter:0,
       }
     },
+    methods:{
+      createClass (obj,str = ''){
+        if (!obj){return[]}
+        let array = []
+        if (obj.span){
+          array.push(`col-${str}${obj.span}`)
+        }
+        if (obj.offset){
+          array.push(`offset-${str}${obj.offset}`)
+        }
+        console.log(array);
+        return array
+      }
+    },
     computed:{
       colClass(){
-        let {span,offset,ipad,narrowPc,pc,widePc} = this
+        let {span,offset,ipad,narrowPc,pc,widePc,createClass} = this
         return [
-          span &&`col-${span}`,
-          offset &&`offset-${offset}`,
-          ...(ipad ? [`col-ipad-${ipad.span}`] : []),
-          ...(narrowPc ? [`col-narrowPc-${narrowPc.span}`]:[]),
-          ...(pc ? [`col-pc-${pc.span}`]:[]),
-          ...(widePc ? [`col-widePc-${widePc.span}`]:[])
+          ...createClass({span,offset}),
+          ...createClass(ipad,'ipad-'),
+          ...createClass(narrowPc,'narrowPc-'),
+          ...createClass(pc,'pc-'),
+          ...createClass(widePc,'widePc')
+
         ]
       },
       colStyle(){
