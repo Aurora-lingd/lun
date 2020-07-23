@@ -23,7 +23,6 @@
       --border-color-hover: #666;
     }
     #app {
-      margin: 20px;
     }
 
     body {
@@ -31,83 +30,22 @@
     }
   </style>
   <style>
-    .box{
-      margin: 20px;
-    }
     .demo{
-      background: paleturquoise;
       border: 1px solid palegoldenrod;
-      height: 100px;
+      min-height: 100px;
     }
   </style>
 </head>
 <body>
 <div id="app">
-  <w-row>
-    <w-col span="23" offset="1"  :narrow-pc="{span:12,offset:12}">
-      <div class="demo"></div>
-    </w-col>
-  </w-row>
-<!--  <div style="border: 1px solid gainsboro">-->
-<!--    <w-row gutter="20" >-->
-<!--      <w-col span="24"-->
-<!--             :pc="{span:2}"-->
-<!--             :wide-pc="{span:1}"-->
-<!--      >1</w-col>-->
-<!--      <w-col span="24"-->
-<!--             :pc="{span:22}"-->
-<!--             :wide-pc="{span:23}"-->
-<!--      >1</w-col>-->
-<!--    </w-row>-->
-<!--    <w-row gutter="20">-->
-<!--      <w-col span="2">1</w-col>-->
-<!--      <w-col span="22">1</w-col>-->
-<!--    </w-row>-->
-<!--    <w-row gutter="20">-->
-<!--      <w-col span="4">1</w-col>-->
-<!--      <w-col span="20">1</w-col>-->
-<!--    </w-row>-->
-<!--    <w-row gutter="20">-->
-<!--      <w-col span="4">1</w-col>-->
-<!--      <w-col span="8" offset="2">1</w-col>-->
-<!--      <w-col span="8" offset="2">1</w-col>-->
-<!--    </w-row>-->
-<!--    <w-row gutter="20">-->
-<!--      <w-col span="4">1</w-col>-->
-<!--      <w-col span="4" offset="6">1</w-col>-->
-<!--      <w-col span="8" offset="2">1</w-col>-->
-<!--    </w-row>-->
-<!--  </div>-->
-
-<!--  <div class="box">-->
-<!--    <w-input value="你好" disabled></w-input>-->
-<!--    <w-input value="哈哈" readonly></w-input>-->
-<!--    <w-input value="爱你" v-model="message" ></w-input>-->
-<!--    <p>{{message}}</p>-->
-<!--  </div>-->
-<!--  <div class="box">-->
-<!--    <w-input value="开心" @change="inputChange"></w-input>-->
-<!--  </div>-->
-<!--  <div class="box">-->
-<!--    <w-input value="开" error="姓名不能少于两个字"></w-input>-->
-<!--  </div>-->
-<!--  <div class="box">-->
-<!--    <w-button :loading="loading1" @click="loading1 = !loading1">-->
-<!--      爱你-->
-<!--    </w-button>-->
-<!--    <w-button icon="settings" >-->
-<!--      爱你-->
-<!--    </w-button>-->
-<!--    <w-button icon="settings" icon-position="right" :loading="true">-->
-<!--      爱你-->
-<!--    </w-button>-->
-<!--    <w-button-group>-->
-<!--      <w-button icon="left">上一页</w-button>-->
-<!--      <w-button>更多</w-button>-->
-<!--      <w-button icon="right" icon-position="right">下一页</w-button>-->
-<!--    </w-button-group>-->
-<!--  </div>-->
-
+  <w-layout style="height: 100vh">
+    <w-sider class="demo">sider</w-sider>
+    <w-layout>
+      <w-header class="demo">header</w-header>
+      <w-content class="demo">content</w-content>
+      <w-footer class="demo">footer</w-footer>
+    </w-layout>
+  </w-layout>
 </div>
 <script src="./src/app.js"></script>
 </body>

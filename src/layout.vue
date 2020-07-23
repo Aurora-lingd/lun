@@ -1,14 +1,36 @@
 <template>
-  
+  <div class="layout" :class="layoutClass">
+    <slot></slot>
+  </div>
+
 </template>
 
 <script>
-  export default
-  {
-
+  export default {
+    name:'WeiLayout',
+    data(){
+      return{
+        layoutClass:{hasSider:false}
+      }
+    },
+    mounted() {
+      this.$children.forEach((vm)=>{
+        if (vm.$options.name === 'WeiSider'){
+            this.layoutClass.hasSider = true
+        }
+      })
+    }
   }
 </script>
 
 <style lang='scss' scoped>
-
+.layout{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background: pink;
+  &.hasSider{
+    flex-direction: row;
+  }
+}
 </style>
