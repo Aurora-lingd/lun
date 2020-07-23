@@ -58,7 +58,7 @@
           ...createClass(ipad,'ipad-'),
           ...createClass(narrowPc,'narrowPc-'),
           ...createClass(pc,'pc-'),
-          ...createClass(widePc,'widePc')
+          ...createClass(widePc,'widePc-')
 
         ]
       },
