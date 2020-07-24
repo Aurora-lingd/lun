@@ -36,12 +36,21 @@ new Vue({
   created() {
   },
   methods:{
-    showToast(){
+    showToast(position){
       this.$toast('你好呀',{
-        position:'middle',
+        position,
         enableHtml: false,
         autoClose: false
       })
+    },
+    showToast1(){
+      this.showToast('top')
+    },
+    showToast2(){
+      this.showToast('middle')
+    },
+    showToast3(){
+      this.showToast('bottom')
     }
   }
 })
