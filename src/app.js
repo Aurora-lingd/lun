@@ -34,8 +34,10 @@ new Vue({
     message:'hi'
   },
   created() {
-    this.$toast('很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字很多文字,完',{
+    this.$toast('你好呀',{
+      position:'middle',
       enableHtml: false,
+      autoClose: false
     })
   },
   methods:{
