@@ -34,17 +34,14 @@ new Vue({
     message:'hi'
   },
   created() {
-    this.$toast('你好呀',{
-      position:'middle',
-      enableHtml: false,
-      autoClose: false
-    })
   },
   methods:{
-    inputChange(e){
-      console.log(e);
-    },
     showToast(){
+      this.$toast('你好呀',{
+        position:'middle',
+        enableHtml: false,
+        autoClose: false
+      })
     }
   }
 })
