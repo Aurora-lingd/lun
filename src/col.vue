@@ -46,7 +46,6 @@
         if (obj.offset){
           array.push(`offset-${str}${obj.offset}`)
         }
-        console.log(array);
         return array
       }
     },
