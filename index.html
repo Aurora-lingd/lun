@@ -33,30 +33,11 @@
     .demo{
       min-height: 100px;
     }
-    .sider{
-      background: pink;
-      width: 200px;
-    }
-    .header{
-      background: palegoldenrod;
-      height: 100px;
-    }
-    .footer{
-      background: paleturquoise;
-      height: 50px;
-    }
   </style>
 </head>
 <body>
 <div id="app">
-  <w-layout style="height: 100vh">
-    <w-sider >sider</w-sider>
-    <w-layout>
-      <w-header >header</w-header>
-      <w-content >content</w-content>
-      <w-footer >footer</w-footer>
-    </w-layout>
-  </w-layout>
+  <button @click="showToast">按钮</button>
 </div>
 <script src="./src/app.js"></script>
 </body>

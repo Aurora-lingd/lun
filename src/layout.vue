@@ -2,9 +2,7 @@
   <div class="layout" :class="layoutClass">
     <slot></slot>
   </div>
-
 </template>
-
 <script>
   export default {
     name:'WeiLayout',
@@ -22,7 +20,6 @@
     }
   }
 </script>
-
 <style lang='scss' scoped>
 .layout{
   flex-grow: 1;
