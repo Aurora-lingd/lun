@@ -25,7 +25,7 @@ describe('Toast', () => {
       })
     });
 
-    it('接受closeButton', ()=> {
+    it('接受closeButton', (done)=> {
      const callback = sinon.fake()
       const Constructor = Vue.extend(Toast)
       const vm = new Constructor({
@@ -38,13 +38,16 @@ describe('Toast', () => {
       }).$mount()
       let closeButton = vm.$el.querySelector('.close')
       expect(closeButton.textContent.trim()).to.eq('关闭吧')
-      closeButton.click()
-      expect(callback).to.have.been.called
-      vm.$el.remove()
-      vm.$destroy()
+      setTimeout(()=>{
+        closeButton.click()
+        expect(callback).to.have.been.called
+        done()
+        vm.$el.remove()
+        vm.$destroy()
+      })
     });
 
-    it('接受enableHtml', ()=> {
+    it('接受enableHtml', (done)=> {
       const Constructor = Vue.extend(Toast)
       const vm = new Constructor({
         propsData:{
@@ -54,12 +57,15 @@ describe('Toast', () => {
       vm.$slots.default=[`<strong id="test">hi</strong>`]
       vm.$mount()
       const strong = vm.$el.querySelector('#test')
-      expect(strong).to.exist
-      vm.$el.remove()
-      vm.$destroy()
+      setTimeout(()=>{
+        expect(strong).to.exist
+        done()
+        vm.$el.remove()
+        vm.$destroy()
+      })
     });
 
-    it('接受position', ()=> {
+    it('接受position', (done)=> {
       const Constructor = Vue.extend(Toast)
       const vm = new Constructor({
         propsData:{
@@ -67,9 +73,12 @@ describe('Toast', () => {
         }
       })
       vm.$mount()
-      expect(vm.$el.classList.contains('position-bottom')).to.eq(true)
-      vm.$el.remove()
-      vm.$destroy()
+      setTimeout(()=>{
+        expect(vm.$el.classList.contains('position-bottom')).to.eq(true)
+        done()
+        vm.$el.remove()
+        vm.$destroy()
+      })
     });
 
   })
