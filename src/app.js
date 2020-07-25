@@ -40,7 +40,7 @@ new Vue({
       this.$toast('你好呀',{
         position,
         enableHtml: false,
-        autoClose: false
+        closeButton:false,
       })
     },
     showToast1(){

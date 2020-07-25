@@ -5,11 +5,14 @@
         <slot v-if="!enableHtml"></slot>
         <div v-else v-html="$slots.default[0]"></div>
       </div>
-      <div class="line" ref="line"></div>
-      <span class="close"
-            v-if="closeButton"
-            @click="onClickClose"
-      >{{closeButton.text}}</span>
+      <template v-if="closeButton">
+        <div class="line" ref="line"></div>
+        <span class="close"
+              @click="onClickClose"
+        >
+        {{closeButton.text}}
+      </span>
+      </template>
     </div>
   </div>
 </template>
@@ -26,7 +29,7 @@
       }
       },
       closeButton: {
-        type: Object,
+        type: [Object,Boolean],
         default: () => {
           return {
             text: '关闭', callback: undefined
@@ -76,7 +79,7 @@
       onClickClose() {
         this.close()
         if (this.closeButton && typeof this.closeButton.callback === 'function') {
-          this.closeButton.callback()
+          this.closeButton.callback(this)
         }
       }
     }
