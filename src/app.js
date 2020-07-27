@@ -12,6 +12,11 @@ import Header from './header'
 import Sider from './sider'
 import Toast from './toast'
 import plugin from './plugin'
+import Tabs from './tabs'
+import TabsHead from './tabs-head'
+import TabsItem from './tabs-item'
+import TabsBody from './tabs-body'
+import TabsPane from './tabs-pane'
 
 Vue.component('w-button',Button)
 Vue.component('w-icon',Icon)
@@ -26,12 +31,19 @@ Vue.component('w-header',Header)
 Vue.component('w-sider',Sider)
 Vue.component('w-toast',Toast)
 Vue.use(plugin)
+Vue.component('w-tabs',Tabs)
+Vue.component('w-tabs-head',TabsHead)
+Vue.component('w-tabs-item',TabsItem)
+Vue.component('w-tabs-body',TabsBody)
+Vue.component('w-tabs-pane',TabsPane)
+
 
 new Vue({
   el:'#app',
   data:{
     loading1:false,
-    message:'hi'
+    message:'hi',
+    selectedTab:'weibo'
   },
   created() {
   },
