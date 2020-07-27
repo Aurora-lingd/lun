@@ -31,8 +31,15 @@
       }
     },
     mounted(){
-      this.eventBus.$emit('update:selected',this.selected)
-      //this.$emit('update:selected','')
+      this.$children.forEach((vm)=>{
+       if (vm.$options.name === 'WeiTabsHead'){
+         vm.$children.forEach((childVm)=>{
+           if (childVm.$options.name === 'WeiTabsItem' && childVm.name === this.selected){
+             this.eventBus.$emit('update:selected',this.selected,childVm)
+           }
+         })
+       }
+      })
     }
   }
 
