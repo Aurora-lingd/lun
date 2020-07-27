@@ -39,16 +39,18 @@
 <div id="app">
   <w-tabs :selected.sync="selectedTab" >
     <w-tabs-head>
-      <w-tabs-item name="yang">养生</w-tabs-item>
+      <w-tabs-item name="yang">
+        <w-icon name="settings"></w-icon>
+        养生
+      </w-tabs-item>
       <w-tabs-item name="weibo">微博</w-tabs-item>
       <w-tabs-item name="dou">抖音</w-tabs-item>
+      <template slot="actions">
+        <button>设置</button>
+      </template>
     </w-tabs-head>
     <w-tabs-body>
       <w-tabs-pane name="yang">
-        <template slot="actions">
-          <button>设置</button>
-        </template>
-        <w-icon name="settings"></w-icon>
         养生相关资讯
       </w-tabs-pane>
       <w-tabs-pane name="weibo" disabled>
