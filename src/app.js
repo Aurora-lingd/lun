@@ -17,6 +17,7 @@ import TabsHead from './tabs-head'
 import TabsItem from './tabs-item'
 import TabsBody from './tabs-body'
 import TabsPane from './tabs-pane'
+import Popover from './popover'
 
 Vue.component('w-button',Button)
 Vue.component('w-icon',Icon)
@@ -36,7 +37,7 @@ Vue.component('w-tabs-head',TabsHead)
 Vue.component('w-tabs-item',TabsItem)
 Vue.component('w-tabs-body',TabsBody)
 Vue.component('w-tabs-pane',TabsPane)
-
+Vue.component('w-popover',Popover)
 
 new Vue({
   el:'#app',
@@ -55,15 +56,6 @@ new Vue({
         closeButton:false,
       })
     },
-    showToast1(){
-      this.showToast('top')
-    },
-    showToast2(){
-      this.showToast('middle')
-    },
-    showToast3(){
-      this.showToast('bottom')
-    }
   }
 })
 
