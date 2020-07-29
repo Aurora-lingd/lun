@@ -35,8 +35,9 @@
 <body>
 <div id="app" style="padding-top: 100px;padding-left: 100px;overflow: hidden" >
   <w-popover>
-    <template slot="content">
+    <template slot="content" slot-scope="{close}">
       <div>popover 内容</div>
+      <w-button @click="close">关闭</w-button>
     </template>
       <w-button>上</w-button>
   </w-popover>
