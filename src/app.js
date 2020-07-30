@@ -46,9 +46,7 @@ Vue.component('w-collapse-item',CollapseItem)
 new Vue({
   el:'#app',
   data:{
-    loading1:false,
-    message:'hi',
-    selectedTab:'weibo'
+    selectedTab:'2'
   },
   created() {
   },
