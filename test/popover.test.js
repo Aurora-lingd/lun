@@ -33,14 +33,14 @@ describe('Popover', () => {
     })
   })
 
-  xit('可设置 trigger', function (done) {
+  it('可设置 trigger', function (done) {
     Vue.component('w-popover',Popover)
     const div = document.createElement('div')
     document.body.appendChild(div)
     div.innerHTML = `
   <w-popover trigger="hover" ref="a">
     <template slot="content">
-      <div>弹出内容</div>
+      <div ref="b">弹出内容</div>
     </template>
     <button>下</button>
   </w-popover>
@@ -50,9 +50,13 @@ describe('Popover', () => {
     })
     vm.$nextTick(()=>{
       const event = new Event('mouseenter')
-      vm.$el.dispatchEvent(event)
-      expect(vm.$refs.a.$refs.contentWrapper).to.exist
-      done()
+      const  popover = vm.$refs.a.$refs.popover
+      popover.dispatchEvent(event)
+      vm.$nextTick(()=>{
+        const  contentWrapper = vm.$refs.a.$refs.contentWrapper
+        expect(contentWrapper).to.exist
+        done()
+      })
     })
   });
 })
