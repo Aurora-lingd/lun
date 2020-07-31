@@ -6,9 +6,7 @@
     <w-button disabled>默认按钮</w-button>
     <w-button icon="settings" icon-position="right">默认按钮</w-button>
 
-    <pre>
-      <code>{{content}}</code>
-    </pre>
+    <pre><code>{{content}}</code></pre>
   </div>
 </template>
 <script>
@@ -23,7 +21,7 @@
         <w-button :loading="true">默认按钮</w-button>
         <w-button disabled>默认按钮</w-button>
         <w-button icon="settings" icon-position="right">默认按钮</w-button>
-        `
+        `.replace(/\t+| +/g,'').trim()
       }
     }
   }
