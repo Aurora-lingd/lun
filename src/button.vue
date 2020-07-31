@@ -56,14 +56,20 @@
     justify-content: center;
     align-items: center;
     vertical-align: middle;
-    &:hover {
-      border-color: $border-color-hover;
+    &:not(:disabled){
+      &:hover {
+        border-color: $border-color-hover;
+      }
+      &:active{
+        background-color:$button-active-bg ;
+      }
+      &:focus{
+        outline: none;
+      }
     }
-    &:active{
-      background-color:$button-active-bg ;
-    }
-    &:focus{
-      outline: none;
+    &[disabled]{
+      border-color: #cfcdcd;
+      cursor: not-allowed;
     }
     >.icon{
       order: 1;
