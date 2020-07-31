@@ -44,7 +44,8 @@
   $border-color-hover: #666;
   $border-radius: 4px;
   $font-size: 14px;
-  $box-shadow-color:rgba(0,0,0,0.5);
+  $box-shadow-color: rgba(153, 152, 152, 0.5);
+  $box-shadow-error-color: rgba(250, 155, 155, 0.5);
   $red:#f1453d;
   .wrapper{
     font-size: $font-size;
@@ -75,6 +76,7 @@
     &.error{
       >input{
         border-color: $red;
+        box-shadow:inset 0 1px 3px $box-shadow-error-color ;
       }
     }
     .icon-error{
