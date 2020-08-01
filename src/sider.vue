@@ -1,8 +1,8 @@
 <template>
   <transition name="slide">
-    <div class="sider" v-if="visible">
+    <div class="sider" v-if="visible" ref="sider">
       <slot></slot>
-      <button @click="visible=false">close</button>
+      <button @click="visible=false" v-if="button">关闭</button>
     </div>
   </transition>
 </template>
@@ -13,6 +13,12 @@
     data() {
       return {
         visible: true
+      }
+    },
+    props:{
+      button:{
+        type:Boolean,
+        default:false
       }
     },
   }
