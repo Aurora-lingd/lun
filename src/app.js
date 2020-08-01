@@ -46,6 +46,7 @@ Vue.component('w-collapse-item',CollapseItem)
 new Vue({
   el:'#app',
   data:{
+    selected:'1',
     selectedTab:['2','1']
   },
   created() {
@@ -54,8 +55,6 @@ new Vue({
     showToast(position){
       this.$toast('你好呀',{
         position,
-        enableHtml: false,
-        closeButton:false,
       })
     },
   }
