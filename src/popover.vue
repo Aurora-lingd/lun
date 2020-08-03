@@ -45,7 +45,7 @@
     },
     destroyed() {
       if (this.trigger === 'click'){
-        this.$refs.popover.removeEventListener('click',this.onClick)
+          his.$refs.popover.removeEventListener('click',this.onClick)
       }else {
         this.$refs.popover.removeEventListener('mouseenter',this.open)
         this.$refs.popover.removeEventListener('mouseleave',this.close)
