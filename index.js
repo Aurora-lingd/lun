@@ -20,6 +20,5 @@ import WPopover from './src/popover'
 import WCollapse from './src/collapse'
 import WCollapseItem from './src/collapse-item'
 
-export {WButtonGroup,WButton,WIcon,WInput,WRow,WCol,WLayout,WContent,WFooter,WHeader,WSider,WToast,
-  WPlugin,WTabs,WTabsHead,WTabsItem,WTabsBody,WTabsPane,WPopover,WCollapse,WCollapseItem
+export default {WButtonGroup,WButton,WIcon,WInput,WRow,WCol,WLayout,WContent,WFooter,WHeader,WSider,WToast,WPlugin,WTabs,WTabsHead,WTabsItem,WTabsBody,WTabsPane,WPopover,WCollapse,WCollapseItem
 }
