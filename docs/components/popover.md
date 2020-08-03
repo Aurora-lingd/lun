@@ -1,8 +1,8 @@
 ---
-title:Popover - 弹出层
+title:Popover 弹出层
 ---
 
-# 弹出层
+# Popover 弹出层
 
 ## 功能介绍
 点击按钮或鼠标hover时提示的信息
