@@ -20,6 +20,7 @@
         <w-tabs-pane name="3">标题3相关内容</w-tabs-pane>
       </w-tabs-body>
     </w-tabs>
+
   </div>
 </template>
 <script>
@@ -44,6 +45,8 @@
   import Popover from './popover'
   import Collapse from './collapse'
   import CollapseItem from './collapse-item'
+  import x from '../dist/myLib.umd'
+  console.log(x)
 
   export default {
     name: 'App',

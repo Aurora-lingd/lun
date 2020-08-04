@@ -2,10 +2,9 @@
   "name": "weiguang",
   "version": "0.0.7",
   "description": "这是一个UI框架",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "npx vue-cli-service build --target lib --name weiGuang src/index.js",
     "test": "vue-cli-service test:unit",
     "test:unit": "vue-cli-service test:unit",
     "docs:dev": "vuepress dev docs",
