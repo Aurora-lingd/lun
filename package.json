@@ -1,7 +1,8 @@
 {
   "name": "weiguang",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "这是一个UI框架",
+  "main": "dist/weiGuang.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npx vue-cli-service build --target lib --name weiGuang src/index.js",
