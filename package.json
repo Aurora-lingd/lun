@@ -1,6 +1,6 @@
 {
   "name": "weiguang-test",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "这是一个UI框架",
   "main": "dist/index.js",
   "scripts": {
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/Aurora-lingd/lun#readme",
   "dependencies": {
+    "dist": "^0.1.2",
     "vue": "^2.6.11",
     "vue-hot-reload-api": "^2.3.4"
   },
