@@ -1,6 +1,12 @@
-const expect = chai.expect;
-import Vue from 'vue'
-import Toast from '../src/toast'
+import Collapse from '../../src/collapse'
+import CollapseItem from '../../src/collapse-item'
+import chai,{expect} from 'chai'
+import sinon from "sinon";
+import sinonChai from 'sinon-chai'
+chai.use(sinonChai)
+import Vue from "vue";
+import {shallowMount,mount} from "@vue/test-utils";
+import Toast from '../../src/toast'
 
 Vue.config.productionTip = false
 Vue.config.devtools = false
@@ -10,7 +16,7 @@ describe('Toast', () => {
     expect(Toast).to.exist
   })
   describe('props',()=>{
-    it('接受autoClose', (done)=> {
+    it('接受autoClose', ()=> {
       const div = document.createElement('div')
       document.body.appendChild(div)
       const Constructor = Vue.extend(Toast)
@@ -21,11 +27,10 @@ describe('Toast', () => {
       }).$mount(div)
       vm.$on('close',()=>{
         expect(document.body.contains(vm.$el)).to.eq(false)
-        done()
       })
     });
 
-    it('接受closeButton', (done)=> {
+    it('接受closeButton', ()=> {
      const callback = sinon.fake()
       const Constructor = Vue.extend(Toast)
       const vm = new Constructor({
@@ -41,13 +46,12 @@ describe('Toast', () => {
       setTimeout(()=>{
         closeButton.click()
         expect(callback).to.have.been.called
-        done()
         vm.$el.remove()
         vm.$destroy()
       })
     });
 
-    it('接受enableHtml', (done)=> {
+    it('接受enableHtml', ()=> {
       const Constructor = Vue.extend(Toast)
       const vm = new Constructor({
         propsData:{
@@ -59,13 +63,12 @@ describe('Toast', () => {
       const strong = vm.$el.querySelector('#test')
       setTimeout(()=>{
         expect(strong).to.exist
-        done()
         vm.$el.remove()
         vm.$destroy()
       })
     });
 
-    it('接受position', (done)=> {
+    it('接受position', ()=> {
       const Constructor = Vue.extend(Toast)
       const vm = new Constructor({
         propsData:{
@@ -75,12 +78,11 @@ describe('Toast', () => {
       vm.$mount()
       setTimeout(()=>{
         expect(vm.$el.classList.contains('position-bottom')).to.eq(true)
-        done()
         vm.$el.remove()
         vm.$destroy()
       })
     });
 
-  })
+   })
 
 })

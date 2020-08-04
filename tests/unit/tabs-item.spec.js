@@ -1,11 +1,16 @@
-import TabsHead from "../src/tabs-head";
-
-const expect = chai.expect;
+import TabsHead from "../../src/tabs-head";
+import Collapse from '../../src/collapse'
+import CollapseItem from '../../src/collapse-item'
+import chai,{expect} from 'chai'
+import sinon from "sinon";
+import sinonChai from 'sinon-chai'
+chai.use(sinonChai)
+import {shallowMount,mount} from "@vue/test-utils";
 import Vue from 'vue'
-import Tabs from '../src/tabs'
-import TabsItem from "../src/tabs-item";
-import TabsBody from "../src/tabs-body";
-import TabsPane from "../src/tabs-pane";
+import Tabs from '../../src/tabs'
+import TabsItem from "../../src/tabs-item";
+import TabsBody from "../../src/tabs-body";
+import TabsPane from "../../src/tabs-pane";
 
 Vue.component('w-tabs',Tabs)
 Vue.component('w-tabs-head',TabsHead)
