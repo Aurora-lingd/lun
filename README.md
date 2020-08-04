@@ -6,6 +6,8 @@
 
 这是我在学习 Vue 的过程中做的一个 UI 框架，希望对你有用。
 
+具体案例请参考文档
+
 
 ## 开始使用
 
@@ -13,17 +15,18 @@
 
     使用本框架前，请在 CSS 中开启 border-box
     
-    ```
-    *,*::before,*::after{box-sizing:border-box;}
-    ```
+```css
+*,*::before,*::after{box-sizing:border-box;}
+```
 >    IE 8 及以上浏览器都支持此样式。
 
 2.  安装 weiguang
-    ```sh
-    npm install weiguang
-    //或者
-    yarn add weiguang
-    ```
+
+```shell script
+npm install weiguang
+//或者
+yarn add weiguang
+```
 3. 引入组件
 
 <br>
@@ -82,11 +85,9 @@ export default {
 ```
 
 ## 文档
-
-## 题问
-
-## 变更记录
+(链接)[http://lingdu.monster/lun/]
 
 ## 联系方式
 
-## 贡献代码
+微信号：Oodudud
+
