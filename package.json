@@ -1,6 +1,6 @@
 {
   "name": "weiguang",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "description": "这是一个UI框架",
   "main": "dist/weiGuang.umd.min.js",
   "scripts": {
