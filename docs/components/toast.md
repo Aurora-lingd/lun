@@ -79,3 +79,18 @@ methods: {
 <br>
 
 **使用方法**
+```html
+methods: {
+      showToast() {
+        this.$toast('<strong>加粗提醒</strong>', {
+          autoClose:false,
+          enableHtml:true,
+          closeButton:{
+            text:'OK',
+          },
+        })
+      },
+    }
+
+<w-button @click="showToast('top')">上方弹出</w-button>
+```
